@@ -74,7 +74,7 @@ export default function DetailsPage() {
             />
           </div>
           <div>
-            <label className="field-label">Blood group</label>
+            <p className="field-label">Blood group</p>
             <div className="grid grid-cols-4 gap-2">
               {BLOOD_GROUPS.map((bg) => (
                 <button
@@ -91,7 +91,7 @@ export default function DetailsPage() {
             </div>
           </div>
 
-          {error && <p className="text-[13.5px] font-medium text-stop">{error}</p>}
+          {error && <p role="alert" className="text-[13.5px] font-medium text-stop">{error}</p>}
 
           <button onClick={continueNext} className="btn-primary w-full">
             Continue to documents

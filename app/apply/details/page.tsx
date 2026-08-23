@@ -57,16 +57,16 @@ export default function DetailsPage() {
           </button>
 
           <div>
-            <label className="field-label">Full name</label>
-            <input className="field-input" value={fullName} onChange={(e) => setFullName(e.target.value)} />
+            <label htmlFor="fullName" className="field-label">Full name</label>
+            <input id="fullName" autoFocus autoComplete="name" className="field-input" value={fullName} onChange={(e) => setFullName(e.target.value)} />
           </div>
           <div>
-            <label className="field-label">Father&rsquo;s / Guardian&rsquo;s name</label>
-            <input className="field-input" value={guardianName} onChange={(e) => setGuardianName(e.target.value)} />
+            <label htmlFor="guardianName" className="field-label">Father&rsquo;s / Guardian&rsquo;s name</label>
+            <input id="guardianName" autoComplete="name" className="field-input" value={guardianName} onChange={(e) => setGuardianName(e.target.value)} />
           </div>
           <div>
-            <label className="field-label">Address</label>
-            <textarea
+            <label htmlFor="address" className="field-label">Address</label>
+            <textarea id="address" autoComplete="street-address"
               className="field-input"
               rows={3}
               value={address}

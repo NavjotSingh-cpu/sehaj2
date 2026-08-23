@@ -94,7 +94,7 @@ export default function DetailsPage() {
           {error && <p role="alert" className="text-[13.5px] font-medium text-stop">{error}</p>}
 
           <button onClick={continueNext} className="btn-primary w-full">
-            Continue to documents
+            Save details & see document checklist
           </button>
         </div>
       </section>

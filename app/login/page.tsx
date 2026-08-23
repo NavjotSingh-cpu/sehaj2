@@ -61,10 +61,13 @@ export default function LoginPage() {
                 className="field-input"
                 placeholder="10-digit mobile number"
                 value={mobile}
+                autoFocus
+                aria-describedby="mobile-help"
                 onChange={(e) => setMobile(e.target.value.replace(/\D/g, ""))}
               />
             </div>
-            {error && <p className="text-[13.5px] font-medium text-stop">{error}</p>}
+            <p id="mobile-help" className="-mt-2 text-[13px] leading-snug text-ink/55">We’ll show a demo code on the next screen. No SMS is sent.</p>
+            {error && <p role="alert" className="text-[13.5px] font-medium text-stop">{error}</p>}
             <button type="submit" className="btn-primary w-full">
               Send OTP
             </button>
@@ -91,10 +94,13 @@ export default function LoginPage() {
                 className="field-input tracking-[0.3em]"
                 placeholder="······"
                 value={entered}
+                autoFocus
+                aria-describedby="otp-help"
                 onChange={(e) => setEntered(e.target.value.replace(/\D/g, ""))}
               />
             </div>
-            {error && <p className="text-[13.5px] font-medium text-stop">{error}</p>}
+            <p id="otp-help" className="-mt-2 text-[13px] leading-snug text-ink/55">Type the six digits shown above. The field is ready for you.</p>
+            {error && <p role="alert" className="text-[13.5px] font-medium text-stop">{error}</p>}
             <button type="submit" className="btn-primary w-full">
               Verify &amp; continue
             </button>

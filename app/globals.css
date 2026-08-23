@@ -31,23 +31,23 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-stamp bg-trust px-6 py-3.5 text-[15px] font-semibold text-white
+    @apply inline-flex items-center justify-center rounded-xl bg-trust px-6 py-3.5 text-[15px] font-semibold text-white
     transition-colors hover:bg-trust-dark active:bg-trust-dark disabled:cursor-not-allowed disabled:bg-line disabled:text-ink/40;
     min-height: 48px;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-stamp border border-line bg-white px-6 py-3.5 text-[15px] font-semibold text-ink
+    @apply inline-flex items-center justify-center rounded-xl border border-line bg-white px-6 py-3.5 text-[15px] font-semibold text-ink
     transition-colors hover:bg-paper active:bg-paper;
     min-height: 48px;
   }
   .card {
-    @apply rounded-stamp border border-line bg-card shadow-card;
+    @apply rounded-2xl border border-line bg-card shadow-card;
   }
   .field-label {
     @apply mb-1.5 block text-[13px] font-medium text-ink/70;
   }
   .field-input {
-    @apply w-full rounded-stamp border border-line bg-white px-4 py-3 text-[16px] text-ink placeholder:text-ink/35
+    @apply w-full rounded-xl border border-line bg-white px-4 py-3 text-[16px] text-ink placeholder:text-ink/35
     focus:border-trust focus:outline-none focus:ring-2 focus:ring-trust/20;
     min-height: 48px;
   }

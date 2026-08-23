@@ -75,11 +75,14 @@ export default function EligibilityPage() {
               id="dob"
               type="date"
               className="field-input"
+              autoFocus
+              aria-describedby="dob-help"
               value={dob}
               onChange={(e) => setDob(e.target.value)}
               max={new Date().toISOString().slice(0, 10)}
             />
           </div>
+          <p id="dob-help" className="-mt-3 text-[13px] leading-snug text-ink/55">We ask this first so you don’t spend time on an application you can’t complete.</p>
 
           <fieldset>
             <legend className="field-label">Do you already hold a driving licence?</legend>
@@ -105,7 +108,7 @@ export default function EligibilityPage() {
             </div>
           </fieldset>
 
-          {error && <p className="text-[13.5px] font-medium text-stop">{error}</p>}
+          {error && <p role="alert" className="text-[13.5px] font-medium text-stop">{error}</p>}
 
           <button onClick={checkAndContinue} className="btn-primary w-full">
             Continue
